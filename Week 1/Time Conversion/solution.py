@@ -13,7 +13,6 @@ import sys
 # The function accepts STRING s as parameter.
 #
 
-
 def timeConversion(s):
     hour = s[:2]
 
@@ -28,16 +27,15 @@ def timeConversion(s):
 
         if hour != "12":
             hour = int(hour) + 12
-
+    
     # Remove AM/PM and the hour from string.
     s = s[2:-2]
-
+    
     # String format the hour variable into the time string.
     military_time = f"{hour}{s}"
-
+    
     return military_time
-
-
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
